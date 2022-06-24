@@ -7,3 +7,5 @@ require('core.colorscheme')
 require('core.keymaps')
 require('core.options')
 
+-- Completition
+require('plugins.cmp')
