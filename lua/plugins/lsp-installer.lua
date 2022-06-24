@@ -1,30 +1,25 @@
 -- Configuração default do lsp-installer
-local present, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not present then
+local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok then
    return
 end
 
-require("nvim-lsp-installer").setup {
-    ensure_installed = {},
-    automatic_installation = false,
-    ui = {
-        check_outdated_servers_on_open = true,
-        border = "none",
-        icons = {
-            server_installed = "◍",
-            server_pending = "◍",
-            server_uninstalled = "◍",
-        },
-        keymaps = {
-            toggle_server_expand = "<CR>",
-            install_server = "i",
-            update_server = "u",
-            check_server_version = "c",
-            update_all_servers = "U",
-            check_outdated_servers = "C",
-            uninstall_server = "X",
-        },
-    },
-  max_concurrent_installers = 4,
-}
+local lsp_installer = require("nvim-lsp-installer")
+local lspconfig = require("lspconfig")
 
+-- 1. Set up nvim-lsp-installer first!
+lsp_installer.setup {}
+
+-- 2. (optional) Override the default configuration to be applied to all servers.
+lspconfig.util.default_config = vim.tbl_extend(
+    "force",
+    lspconfig.util.default_config,
+    {
+        on_attach = on_attach
+    }
+)
+
+-- 3. Loop through all of the installed servers and set it up via lspconfig
+for _, server in ipairs(lsp_installer.get_installed_servers()) do
+  lspconfig[server.name].setup {}
+end

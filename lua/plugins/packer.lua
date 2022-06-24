@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use { 'numToStr/Comment.nvim', config = lua_path"comment" }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvim-tree" }
-  use { 'akinsho/bufferline.nvim' }
+  use { 'akinsho/bufferline.nvim', config = lua_path"bufferline" }
   use { 'moll/vim-bbye' }
   use { 'nvim-lualine/lualine.nvim', config = lua_path"lualine" }
   use { 'akinsho/toggleterm.nvim', config = lua_path"toggleterm" }
@@ -81,7 +81,7 @@ return packer.startup(function(use)
   use { 'rafamadriz/friendly-snippets' }
 
   -- LSP
-  use { 'neovim/nvim-lspconfig' }
+  use { 'neovim/nvim-lspconfig', config = lua_path"lspconfig" }
   use { 'williamboman/nvim-lsp-installer', config = lua_path"lsp-installer" }
   use { 'tamago324/nlsp-settings.nvim' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
