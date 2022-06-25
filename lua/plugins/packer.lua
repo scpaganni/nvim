@@ -47,10 +47,10 @@ return packer.startup(function(use)
   end
 
   -- My plugins here
-  use { 'wbthomason/packer.nvim' } 
-  use { 'nvim-lua/popup.nvim' } 
+  use { 'wbthomason/packer.nvim' }
+  use { 'nvim-lua/popup.nvim' }
   use { 'nvim-lua/plenary.nvim' }
-  use { 'windwp/nvim-autopairs', config = lua_path"nvim-autopairs", config = lua_path"nvim-autopairs" }
+  use { 'windwp/nvim-autopairs', config = lua_path"nvim-autopairs" }
   use { 'numToStr/Comment.nvim', config = lua_path"comment" }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvim-tree" }
@@ -59,7 +59,7 @@ return packer.startup(function(use)
   use { 'nvim-lualine/lualine.nvim', config = lua_path"lualine" }
   use { 'akinsho/toggleterm.nvim', config = lua_path"toggleterm" }
   use { 'ahmedkhalf/project.nvim', config = lua_path"project" }
-  use { 'lewis6991/impatient.nvim' }
+  use { 'lewis6991/impatient.nvim', config = lua_path"impatient" }
   use { 'lukas-reineke/indent-blankline.nvim', config = lua_path"indent-blankline" }
   use { 'goolord/alpha-nvim', config = lua_path"alpha-nvim" }
   use { 'antoinemadec/FixCursorHold.nvim' }
@@ -69,15 +69,15 @@ return packer.startup(function(use)
   use { 'Mofiqul/dracula.nvim' }
 
   -- cmp plugins
-  use { 'hrsh7th/nvim-cmp' } 
-  use { 'hrsh7th/cmp-buffer' } 
-  use { 'hrsh7th/cmp-path' } 
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
   use { 'hrsh7th/cmp-cmdline' }
   use { 'saadparwaiz1/cmp_luasnip' }
   use { 'hrsh7th/cmp-nvim-lsp' }
 
   -- snippets
-  use { 'L3MON4D3/LuaSnip' } 
+  use { 'L3MON4D3/LuaSnip' }
   use { 'rafamadriz/friendly-snippets' }
 
   -- LSP
