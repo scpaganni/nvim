@@ -97,6 +97,8 @@ return packer.startup(function(use)
   use { 'lewis6991/gitsigns.nvim', config = lua_path"gitsigns" }
 
   -- Trouble
+  use { 'folke/trouble.nvim', config = lua_path"trouble" }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
