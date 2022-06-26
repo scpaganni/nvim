@@ -90,7 +90,7 @@ return packer.startup(function(use)
   use { 'nvim-telescope/telescope.nvim', config = lua_path"telescope" }
 
   -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = lua_path"nvim-treesitter" }
+  use { 'nvim-treesitter/nvim-treesitter', config = lua_path"nvim-treesitter" }
   use { 'JoosepAlviste/nvim-ts-context-commentstring' }
 
   -- Git

@@ -3,9 +3,10 @@ if not status_ok then
 	return
 end
 
+local lsp_installer = require("nvim-lsp-installer")
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "html", "emmet_ls" }
+local servers = {}
 
 lsp_installer.setup {
 	ensure_installed = servers
