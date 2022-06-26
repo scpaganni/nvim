@@ -9,3 +9,6 @@ require('core.options')
 
 -- Completition
 require('plugins.cmp')
+
+-- LSP
+require('plugins.lsp')

@@ -81,8 +81,8 @@ return packer.startup(function(use)
   use { 'rafamadriz/friendly-snippets' }
 
   -- LSP
-  use { 'neovim/nvim-lspconfig', config = lua_path"lspconfig" }
-  use { 'williamboman/nvim-lsp-installer', config = lua_path"lsp-installer" }
+  use { 'neovim/nvim-lspconfig' }
+  use { 'williamboman/nvim-lsp-installer' }
   use { 'tamago324/nlsp-settings.nvim' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
 
