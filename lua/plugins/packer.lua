@@ -50,7 +50,6 @@ return packer.startup(function(use)
   use { 'wbthomason/packer.nvim' }
   use { 'nvim-lua/popup.nvim' }
   use { 'nvim-lua/plenary.nvim' }
-  use { 'windwp/nvim-autopairs', config = lua_path"nvim-autopairs" }
   use { 'numToStr/Comment.nvim', config = lua_path"comment" }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvim-tree" }
@@ -88,10 +87,13 @@ return packer.startup(function(use)
 
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', config = lua_path"telescope" }
-
+  
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', config = lua_path"nvim-treesitter" }
   use { 'JoosepAlviste/nvim-ts-context-commentstring' }
+  use { 'p00f/nvim-ts-rainbow' }
+  use { 'windwp/nvim-ts-autotag' }
+  use { 'windwp/nvim-autopairs', config = lua_path"nvim-autopairs" }
 
   -- Git
   use { 'lewis6991/gitsigns.nvim', config = lua_path"gitsigns" }
