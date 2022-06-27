@@ -100,6 +100,12 @@ return packer.startup(function(use)
 
   -- Trouble
   use { 'folke/trouble.nvim', config = lua_path"trouble" }
+  
+  -- Colorizer
+  use { 'norcalli/nvim-colorizer.lua', config = lua_path"nvim-colorizer" }
+
+  -- LazyGit
+  use { 'kdheepak/lazygit.nvim' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
