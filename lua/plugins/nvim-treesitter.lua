@@ -1,8 +1,5 @@
 local status_ok, treesitter = pcall(require, 'nvim-treesitter.configs')
-if not status_ok then
-  return
-end
-
+if status_ok then
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {},
     sync_install = false,
@@ -26,4 +23,4 @@ require'nvim-treesitter.configs'.setup {
     incremental_selection = { enable = true },
     indent = { enable = false },
   }
-
+end
