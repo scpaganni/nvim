@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use { 'folke/which-key.nvim', config = lua_path"which-key" }
 
   -- Colorschemes
-  use { 'Mofiqul/dracula.nvim' }
+  use { 'navarasu/onedark.nvim' }
 
   -- cmp plugins
   use { 'hrsh7th/nvim-cmp' }
