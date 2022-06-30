@@ -69,3 +69,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
 keymap("n", "<C-t>", ":Telescope<CR>", opts)
+
+-- Rename tags
+keymap("n", "<leader>,", "<cmd>lua vim.lsp.buf.rename()<CR>", opts )
