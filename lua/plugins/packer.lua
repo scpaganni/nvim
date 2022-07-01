@@ -90,9 +90,9 @@ return packer.startup(function(use)
   
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', config = lua_path"nvim-treesitter" }
-  use { 'JoosepAlviste/nvim-ts-context-commentstring' }
-  use { 'p00f/nvim-ts-rainbow' }
-  use { 'windwp/nvim-ts-autotag' }
+  use { 'JoosepAlviste/nvim-ts-context-commentstring', after = "nvim-treesitter" }
+  use { 'p00f/nvim-ts-rainbow', after = "nvim-treesitter" }
+  use { 'windwp/nvim-ts-autotag', after = "nvim-treesitter" }
   use { 'windwp/nvim-autopairs', config = lua_path"nvim-autopairs" }
 
   -- Git
