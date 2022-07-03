@@ -87,7 +87,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', config = lua_path"telescope" }
-  
+
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', config = lua_path"nvim-treesitter" }
   use { 'JoosepAlviste/nvim-ts-context-commentstring', after = "nvim-treesitter" }
@@ -100,12 +100,15 @@ return packer.startup(function(use)
 
   -- Trouble
   use { 'folke/trouble.nvim', config = lua_path"trouble" }
-  
+
   -- Colorizer
   use { 'norcalli/nvim-colorizer.lua', config = lua_path"nvim-colorizer" }
 
   -- LazyGit
   use { 'kdheepak/lazygit.nvim' }
+
+  -- AutoSave
+  use { 'Pocco81/AutoSave.nvim', config = lua_path"autosave" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
